@@ -573,6 +573,96 @@ def perplexity_loss(
     return np.mean(perp_losses)
 
 
+def smooth_l1_loss(y_true: np.ndarray, y_pred: np.ndarray, beta: float = 1.0) -> float:
+    """
+    Calculate the Smooth L1 Loss between y_true and y_pred.
+
+    The Smooth L1 Loss is less sensitive to outliers than the L2 Loss and is often used
+    in regression problems, such as object detection.
+
+    Smooth L1 Loss =
+        0.5 * (x - y)^2 / beta, if |x - y| < beta
+        |x - y| - 0.5 * beta, otherwise
+
+    Reference:
+    https://pytorch.org/docs/stable/generated/torch.nn.SmoothL1Loss.html
+
+    Args:
+        y_true: Array of true values.
+        y_pred: Array of predicted values.
+        beta: Specifies the threshold at which to change between L1 and L2 loss.
+
+    Returns:
+        The calculated Smooth L1 Loss between y_true and y_pred.
+
+    Raises:
+        ValueError: If the length of the two arrays is not the same.
+
+    >>> y_true = np.array([3, 5, 2, 7])
+    >>> y_pred = np.array([2.9, 4.8, 2.1, 7.2])
+    >>> smooth_l1_loss(y_true, y_pred, 1.0)
+    0.012500000000000022
+
+    >>> y_true = np.array([2, 4, 6])
+    >>> y_pred = np.array([1, 5, 7])
+    >>> smooth_l1_loss(y_true, y_pred, 1.0)
+    0.5
+
+    >>> y_true = np.array([1, 3, 5, 7])
+    >>> y_pred = np.array([1, 3, 5, 7])
+    >>> smooth_l1_loss(y_true, y_pred, 1.0)
+    0.0
+
+    >>> y_true = np.array([1, 3, 5])
+    >>> y_pred = np.array([1, 3, 5, 7])
+    >>> smooth_l1_loss(y_true, y_pred, 1.0)
+    Traceback (most recent call last):
+    ...
+    ValueError: The length of the two arrays should be the same.
+    """
+
+    if len(y_true) != len(y_pred):
+        raise ValueError("The length of the two arrays should be the same.")
+
+    diff = np.abs(y_true - y_pred)
+    loss = np.where(diff < beta, 0.5 * diff**2 / beta, diff - 0.5 * beta)
+    return np.mean(loss)
+
+
+def kullback_leibler_divergence(y_true: np.ndarray, y_pred: np.ndarray) -> float:
+    """
+    Calculate the Kullback-Leibler divergence (KL divergence) loss between true labels
+    and predicted probabilities.
+
+    KL divergence loss quantifies dissimilarity between true labels and predicted
+    probabilities. It's often used in training generative models.
+
+    KL = Σ(y_true * ln(y_true / y_pred))
+
+    Reference: https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence
+
+    Parameters:
+    - y_true: True class probabilities
+    - y_pred: Predicted class probabilities
+
+    >>> true_labels = np.array([0.2, 0.3, 0.5])
+    >>> predicted_probs = np.array([0.3, 0.3, 0.4])
+    >>> kullback_leibler_divergence(true_labels, predicted_probs)
+    0.030478754035472025
+    >>> true_labels = np.array([0.2, 0.3, 0.5])
+    >>> predicted_probs = np.array([0.3, 0.3, 0.4, 0.5])
+    >>> kullback_leibler_divergence(true_labels, predicted_probs)
+    Traceback (most recent call last):
+        ...
+    ValueError: Input arrays must have the same length.
+    """
+    if len(y_true) != len(y_pred):
+        raise ValueError("Input arrays must have the same length.")
+
+    kl_loss = y_true * np.log(y_true / y_pred)
+    return np.sum(kl_loss)
+
+
 if __name__ == "__main__":
     import doctest
 
