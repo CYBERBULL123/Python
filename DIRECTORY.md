@@ -22,6 +22,8 @@
   * [Rat In Maze](backtracking/rat_in_maze.py)
   * [Sudoku](backtracking/sudoku.py)
   * [Sum Of Subsets](backtracking/sum_of_subsets.py)
+  * [Word Break](backtracking/word_break.py)
+  * [Word Ladder](backtracking/word_ladder.py)
   * [Word Search](backtracking/word_search.py)
 
 ## Bit Manipulation
@@ -84,7 +86,7 @@
   * [Baconian Cipher](ciphers/baconian_cipher.py)
   * [Base16](ciphers/base16.py)
   * [Base32](ciphers/base32.py)
-  * [Base64](ciphers/base64.py)
+  * [Base64 Cipher](ciphers/base64_cipher.py)
   * [Base85](ciphers/base85.py)
   * [Beaufort Cipher](ciphers/beaufort_cipher.py)
   * [Bifid](ciphers/bifid.py)
@@ -98,6 +100,7 @@
   * [Elgamal Key Generator](ciphers/elgamal_key_generator.py)
   * [Enigma Machine2](ciphers/enigma_machine2.py)
   * [Fractionated Morse Cipher](ciphers/fractionated_morse_cipher.py)
+  * [Gronsfeld Cipher](ciphers/gronsfeld_cipher.py)
   * [Hill Cipher](ciphers/hill_cipher.py)
   * [Mixed Keyword Cypher](ciphers/mixed_keyword_cypher.py)
   * [Mono Alphabetic Ciphers](ciphers/mono_alphabetic_ciphers.py)
@@ -139,6 +142,7 @@
   * [Haralick Descriptors](computer_vision/haralick_descriptors.py)
   * [Harris Corner](computer_vision/harris_corner.py)
   * [Horn Schunck](computer_vision/horn_schunck.py)
+  * [Intensity Based Segmentation](computer_vision/intensity_based_segmentation.py)
   * [Mean Threshold](computer_vision/mean_threshold.py)
   * [Mosaic Augmentation](computer_vision/mosaic_augmentation.py)
   * [Pooling Functions](computer_vision/pooling_functions.py)
@@ -166,6 +170,7 @@
   * [Prefix Conversions](conversions/prefix_conversions.py)
   * [Prefix Conversions String](conversions/prefix_conversions_string.py)
   * [Pressure Conversions](conversions/pressure_conversions.py)
+  * [Rectangular To Polar](conversions/rectangular_to_polar.py)
   * [Rgb Cmyk Conversion](conversions/rgb_cmyk_conversion.py)
   * [Rgb Hsv Conversion](conversions/rgb_hsv_conversion.py)
   * [Roman Numerals](conversions/roman_numerals.py)
@@ -210,6 +215,7 @@
     * [Lazy Segment Tree](data_structures/binary_tree/lazy_segment_tree.py)
     * [Lowest Common Ancestor](data_structures/binary_tree/lowest_common_ancestor.py)
     * [Maximum Fenwick Tree](data_structures/binary_tree/maximum_fenwick_tree.py)
+    * [Maximum Sum Bst](data_structures/binary_tree/maximum_sum_bst.py)
     * [Merge Two Binary Trees](data_structures/binary_tree/merge_two_binary_trees.py)
     * [Mirror Binary Tree](data_structures/binary_tree/mirror_binary_tree.py)
     * [Non Recursive Segment Tree](data_structures/binary_tree/non_recursive_segment_tree.py)
@@ -243,6 +249,15 @@
     * [Min Heap](data_structures/heap/min_heap.py)
     * [Randomized Heap](data_structures/heap/randomized_heap.py)
     * [Skew Heap](data_structures/heap/skew_heap.py)
+  * Kd Tree
+    * [Build Kdtree](data_structures/kd_tree/build_kdtree.py)
+    * Example
+      * [Example Usage](data_structures/kd_tree/example/example_usage.py)
+      * [Hypercube Points](data_structures/kd_tree/example/hypercube_points.py)
+    * [Kd Node](data_structures/kd_tree/kd_node.py)
+    * [Nearest Neighbour Search](data_structures/kd_tree/nearest_neighbour_search.py)
+    * Tests
+      * [Test Kdtree](data_structures/kd_tree/tests/test_kdtree.py)
   * Linked List
     * [Circular Linked List](data_structures/linked_list/circular_linked_list.py)
     * [Deque Doubly](data_structures/linked_list/deque_doubly.py)
@@ -260,20 +275,21 @@
     * [Singly Linked List](data_structures/linked_list/singly_linked_list.py)
     * [Skip List](data_structures/linked_list/skip_list.py)
     * [Swap Nodes](data_structures/linked_list/swap_nodes.py)
-  * Queue
-    * [Circular Queue](data_structures/queue/circular_queue.py)
-    * [Circular Queue Linked List](data_structures/queue/circular_queue_linked_list.py)
-    * [Double Ended Queue](data_structures/queue/double_ended_queue.py)
-    * [Linked Queue](data_structures/queue/linked_queue.py)
-    * [Priority Queue Using List](data_structures/queue/priority_queue_using_list.py)
-    * [Queue By List](data_structures/queue/queue_by_list.py)
-    * [Queue By Two Stacks](data_structures/queue/queue_by_two_stacks.py)
-    * [Queue On Pseudo Stack](data_structures/queue/queue_on_pseudo_stack.py)
+  * Queues
+    * [Circular Queue](data_structures/queues/circular_queue.py)
+    * [Circular Queue Linked List](data_structures/queues/circular_queue_linked_list.py)
+    * [Double Ended Queue](data_structures/queues/double_ended_queue.py)
+    * [Linked Queue](data_structures/queues/linked_queue.py)
+    * [Priority Queue Using List](data_structures/queues/priority_queue_using_list.py)
+    * [Queue By List](data_structures/queues/queue_by_list.py)
+    * [Queue By Two Stacks](data_structures/queues/queue_by_two_stacks.py)
+    * [Queue On Pseudo Stack](data_structures/queues/queue_on_pseudo_stack.py)
   * Stacks
     * [Balanced Parentheses](data_structures/stacks/balanced_parentheses.py)
     * [Dijkstras Two Stack Algorithm](data_structures/stacks/dijkstras_two_stack_algorithm.py)
     * [Infix To Postfix Conversion](data_structures/stacks/infix_to_postfix_conversion.py)
     * [Infix To Prefix Conversion](data_structures/stacks/infix_to_prefix_conversion.py)
+    * [Lexicographical Numbers](data_structures/stacks/lexicographical_numbers.py)
     * [Next Greater Element](data_structures/stacks/next_greater_element.py)
     * [Postfix Evaluation](data_structures/stacks/postfix_evaluation.py)
     * [Prefix Evaluation](data_structures/stacks/prefix_evaluation.py)
@@ -282,6 +298,13 @@
     * [Stack With Doubly Linked List](data_structures/stacks/stack_with_doubly_linked_list.py)
     * [Stack With Singly Linked List](data_structures/stacks/stack_with_singly_linked_list.py)
     * [Stock Span Problem](data_structures/stacks/stock_span_problem.py)
+  * Suffix Tree
+    * Example
+      * [Example Usage](data_structures/suffix_tree/example/example_usage.py)
+    * [Suffix Tree](data_structures/suffix_tree/suffix_tree.py)
+    * [Suffix Tree Node](data_structures/suffix_tree/suffix_tree_node.py)
+    * Tests
+      * [Test Suffix Tree](data_structures/suffix_tree/tests/test_suffix_tree.py)
   * Trie
     * [Radix Tree](data_structures/trie/radix_tree.py)
     * [Trie](data_structures/trie/trie.py)
@@ -330,6 +353,9 @@
   * [Power](divide_and_conquer/power.py)
   * [Strassen Matrix Multiplication](divide_and_conquer/strassen_matrix_multiplication.py)
 
+## Docs
+  * [Conf](docs/conf.py)
+
 ## Dynamic Programming
   * [Abbreviation](dynamic_programming/abbreviation.py)
   * [All Construct](dynamic_programming/all_construct.py)
@@ -351,6 +377,7 @@
   * [Longest Common Subsequence](dynamic_programming/longest_common_subsequence.py)
   * [Longest Common Substring](dynamic_programming/longest_common_substring.py)
   * [Longest Increasing Subsequence](dynamic_programming/longest_increasing_subsequence.py)
+  * [Longest Increasing Subsequence Iterative](dynamic_programming/longest_increasing_subsequence_iterative.py)
   * [Longest Increasing Subsequence O Nlogn](dynamic_programming/longest_increasing_subsequence_o_nlogn.py)
   * [Longest Palindromic Subsequence](dynamic_programming/longest_palindromic_subsequence.py)
   * [Matrix Chain Multiplication](dynamic_programming/matrix_chain_multiplication.py)
@@ -436,6 +463,8 @@
 
 ## Graphics
   * [Bezier Curve](graphics/bezier_curve.py)
+  * [Butterfly Pattern](graphics/butterfly_pattern.py)
+  * [Digital Differential Analyzer Line](graphics/digital_differential_analyzer_line.py)
   * [Vector3 For 2D Rendering](graphics/vector3_for_2d_rendering.py)
 
 ## Graphs
@@ -482,6 +511,7 @@
   * [Kahns Algorithm Long](graphs/kahns_algorithm_long.py)
   * [Kahns Algorithm Topo](graphs/kahns_algorithm_topo.py)
   * [Karger](graphs/karger.py)
+  * [Lanczos Eigenvectors](graphs/lanczos_eigenvectors.py)
   * [Markov Chain](graphs/markov_chain.py)
   * [Matching Min Vertex Cover](graphs/matching_min_vertex_cover.py)
   * [Minimum Path Sum](graphs/minimum_path_sum.py)
@@ -540,8 +570,7 @@
   * [Lu Decomposition](linear_algebra/lu_decomposition.py)
   * Src
     * [Conjugate Gradient](linear_algebra/src/conjugate_gradient.py)
-    * Gaussian Elimination Pivoting
-      * [Gaussian Elimination Pivoting](linear_algebra/src/gaussian_elimination_pivoting/gaussian_elimination_pivoting.py)
+    * [Gaussian Elimination Pivoting](linear_algebra/src/gaussian_elimination_pivoting.py)
     * [Lib](linear_algebra/src/lib.py)
     * [Polynom For Points](linear_algebra/src/polynom_for_points.py)
     * [Power Iteration](linear_algebra/src/power_iteration.py)
@@ -637,6 +666,7 @@
   * [Gamma](maths/gamma.py)
   * [Gaussian](maths/gaussian.py)
   * [Gcd Of N Numbers](maths/gcd_of_n_numbers.py)
+  * [Geometric Mean](maths/geometric_mean.py)
   * [Germain Primes](maths/germain_primes.py)
   * [Greatest Common Divisor](maths/greatest_common_divisor.py)
   * [Hardy Ramanujanalgo](maths/hardy_ramanujanalgo.py)
@@ -771,6 +801,7 @@
   * [Cramers Rule 2X2](matrix/cramers_rule_2x2.py)
   * [Inverse Of Matrix](matrix/inverse_of_matrix.py)
   * [Largest Square Area In Matrix](matrix/largest_square_area_in_matrix.py)
+  * [Matrix Based Game](matrix/matrix_based_game.py)
   * [Matrix Class](matrix/matrix_class.py)
   * [Matrix Equalization](matrix/matrix_equalization.py)
   * [Matrix Multiplication Recursion](matrix/matrix_multiplication_recursion.py)
@@ -861,6 +892,7 @@
   * [N Body Simulation](physics/n_body_simulation.py)
   * [Newtons Law Of Gravitation](physics/newtons_law_of_gravitation.py)
   * [Newtons Second Law Of Motion](physics/newtons_second_law_of_motion.py)
+  * [Period Of Pendulum](physics/period_of_pendulum.py)
   * [Photoelectric Effect](physics/photoelectric_effect.py)
   * [Potential Energy](physics/potential_energy.py)
   * [Rainfall Intensity](physics/rainfall_intensity.py)
@@ -1185,6 +1217,7 @@
   * [Binary Tree Traversal](searches/binary_tree_traversal.py)
   * [Double Linear Search](searches/double_linear_search.py)
   * [Double Linear Search Recursion](searches/double_linear_search_recursion.py)
+  * [Exponential Search](searches/exponential_search.py)
   * [Fibonacci Search](searches/fibonacci_search.py)
   * [Hill Climbing](searches/hill_climbing.py)
   * [Interpolation Search](searches/interpolation_search.py)
@@ -1300,7 +1333,7 @@
   * [Title](strings/title.py)
   * [Top K Frequent Words](strings/top_k_frequent_words.py)
   * [Upper](strings/upper.py)
-  * [Wave](strings/wave.py)
+  * [Wave String](strings/wave_string.py)
   * [Wildcard Pattern Matching](strings/wildcard_pattern_matching.py)
   * [Word Occurrence](strings/word_occurrence.py)
   * [Word Patterns](strings/word_patterns.py)
@@ -1328,7 +1361,6 @@
   * [Get Ip Geolocation](web_programming/get_ip_geolocation.py)
   * [Get Top Billionaires](web_programming/get_top_billionaires.py)
   * [Get Top Hn Posts](web_programming/get_top_hn_posts.py)
-  * [Get User Tweets](web_programming/get_user_tweets.py)
   * [Giphy](web_programming/giphy.py)
   * [Instagram Crawler](web_programming/instagram_crawler.py)
   * [Instagram Pic](web_programming/instagram_pic.py)
